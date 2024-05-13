@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "WorkSans";
+    /* usa aa */
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "WorkSans";
+}
+
+body{
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: hsl(275, 100%, 97%);
+    display: grid;
+    place-content: center;
+    
+}
+
+img, svg{
+    max-width: 100%;
+}
+
+.button:hover{
+    color: purple;
+}
+
+/* card */
+
+#card{
+    position: relative;
+    top: 5rem;
+    margin: auto;
+    background-color: white;
+    padding: 1.5rem;
+    max-width: 60%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#card-header{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#card-header > img{
+    width: 40px;
+    margin-right: 1.5rem;
+}
+
+h1{
+    color: hsl(292, 42%, 14%);
+    font-size: 3rem;
+}
+
+/* fim do card*/
+
+/*  item-card  */
+.item-card{
+    padding: 1rem 0;
+}
+
+.item-card:not(:last-child){
+    border-bottom: solid 2px hsl(275, 100%, 97%);
+}
+
+.item-card-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(292, 42%, 14%);
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.icons > img{
+    min-width: 30px;
+}
+
+.minus-icon{
+    display: none;
+}
+
+.item-card-description{
+    font-size: 1rem;
+    color: hsl(292, 16%, 49%);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+/* fim item-card */
+
+
+
+@media(max-width: 1024px){
+    body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        min-width: 375px;
+    }
+}
+
+@media(max-width: 1025px){
+    body{
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+    }
+}
+
+footer{
+    margin-bottom: 5rem;
+    color: hsl(292, 16%, 49%);
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer a{
+    color: hsl(292, 42%, 14%);
+}
+
+
+@media screen and (main-width: 1024x){
+    footer a{
+         width: 50%;   
+        color: hsl(292, 16%, 49%);
+    }    
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
+}
